@@ -1,3 +1,51 @@
+.container {
+  background-image: url("images/187161.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color: white;
+}
+
 .header {
-  color: red;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.board {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 150%;
+}
+
+.options {
+  border: 5px solid white;
+  height: 200px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-left: 42%;
+}
+
+.row {
+  padding: 10px;
+}
+
+button {
+  border: 2px solid white;
+  font-size: xx-large;
+  color: white;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.note {
+  display: flex;
+  justify-content: center;
+}
+
+.hide {
+  visibility: hidden;
 }
