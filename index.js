@@ -1,20 +1,24 @@
 let randomNumber;
 
+let selectedNumber;
+
 const generateRandomNumber = () => {
   // Generated any random number from 0 to 1
   let random = Math.random();
 
+  // Generate any random number from 1 to 6 inclusive
   randomNumber = Math.floor(random * 6 + 1);
 };
 
-function blink_text() {
-  $(".note").fadeOut(500);
-  $(".note").fadeIn(500);
-}
+// All event handlers goes here
 
-$(".generate-button").on("click", () => {
+$("button").click(function () {
+  selectedNumber = $(this).val();
+  document.getElementById("selected").innerHTML = selectedNumber;
   generateRandomNumber();
-  console.log(randomNumber);
+  if (selectedNumber == randomNumber) {
+    $(".win").removeClass("hide");
+  } else {
+    $(".lose").removeClass("hide");
+  }
 });
-
-setInterval(blink_text, 1000);
