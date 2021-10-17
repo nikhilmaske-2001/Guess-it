@@ -11,20 +11,38 @@ const generateRandomNumber = () => {
 };
 
 // All event handlers goes here
-
 $("button").click(function () {
+  $(".timer").hide();
   $(this).css("background-color", "grey");
   selectedNumber = $(this).val();
   document.getElementById("selected").innerHTML = selectedNumber;
   generateRandomNumber();
   if (selectedNumber == randomNumber) {
-    $(".win").removeClass("hide");
+    $(".win").show();
     score++;
     document.getElementById("score").innerHTML = score;
   } else {
-    $(".lose").removeClass("hide");
+    $(".lose").show();
   }
   setInterval(() => {
     $(this).css("background-color", "transparent");
-  }, 2000);
+    $(".win").hide();
+    $(".lose").hide();
+  }, 3000);
+  waitFor3Seconds();
 });
+
+// Function to wait for 3 seconds
+const waitFor3Seconds = () => {
+  $(".timer").show();
+  setTimeout(function () {
+    $(".timer").hide();
+  }, 6000);
+};
+
+// Things happen only first time when page is loading
+$(".loading").show();
+setTimeout(function () {
+  $(".loading").hide();
+  waitFor3Seconds();
+}, 3000);

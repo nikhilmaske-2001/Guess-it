@@ -1,8 +1,14 @@
+body,
+html {
+  height: 100%;
+}
 .container {
+  /* Use this image for whole background */
   background-image: url("images/187161.jpg");
+  height: 100%;
+  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: cover;
   color: white;
 }
 
@@ -45,10 +51,8 @@ button {
 .note {
   display: flex;
   justify-content: center;
-}
-
-.hide {
-  visibility: hidden;
+  text-align: center;
+  display: none;
 }
 
 .black-strip {
