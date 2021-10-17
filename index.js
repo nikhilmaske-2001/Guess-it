@@ -13,6 +13,7 @@ const generateRandomNumber = () => {
 // All event handlers goes here
 
 $("button").click(function () {
+  $(this).css("background-color", "grey");
   selectedNumber = $(this).val();
   document.getElementById("selected").innerHTML = selectedNumber;
   generateRandomNumber();
@@ -21,4 +22,7 @@ $("button").click(function () {
   } else {
     $(".lose").removeClass("hide");
   }
+  setInterval(() => {
+    $(this).css("background-color", "transparent");
+  }, 2000);
 });
