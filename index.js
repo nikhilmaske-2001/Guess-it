@@ -1,6 +1,6 @@
 let randomNumber;
-
 let selectedNumber;
+let score = 0;
 
 const generateRandomNumber = () => {
   // Generated any random number from 0 to 1
@@ -19,6 +19,8 @@ $("button").click(function () {
   generateRandomNumber();
   if (selectedNumber == randomNumber) {
     $(".win").removeClass("hide");
+    score++;
+    document.getElementById("score").innerHTML = score;
   } else {
     $(".lose").removeClass("hide");
   }
