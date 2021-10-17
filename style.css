@@ -16,7 +16,7 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: 150%;
-  margin: 100px;
+  margin: 50px;
 }
 
 .options {
@@ -49,4 +49,14 @@ button {
 
 .hide {
   visibility: hidden;
+}
+
+.black-strip {
+  background-color: black;
+  justify-self: unset;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
 }
